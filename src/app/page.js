@@ -1,8 +1,9 @@
+import Header from "./components/Header/Header";
 
 export default function page() {
   return (
     <>
-     <h2>hello</h2>
+    <Header/>
     </>
   
   )
