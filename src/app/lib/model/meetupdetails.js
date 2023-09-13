@@ -2,11 +2,10 @@ import mongoose from "mongoose";
 
 const meetupSchema = new mongoose.Schema({
   title: String,
-  price: String,
   imageUrl: String,
   description: String,
 });
 
-const MeetupData = mongoose.models.MeetupDetails || mongoose.model("MeetupDetails", meetupSchema);
+const MeetupData = mongoose.models.meetupDetails || mongoose.model("meetupDetails", meetupSchema);
 
 export default MeetupData;

@@ -2,7 +2,7 @@
 const { NAME, PASSWORD } = process.env;
 
 
-const connectionString = "mongodb+srv://reactmeet:Reactmeetup@cluster0.2tr3mup.mongodb.net/Meetup?retryWrites=true&w=majority"
+const connectionString = "mongodb+srv://meetup:Meetupone@cluster0.57hj0kc.mongodb.net/ReactMeetup?retryWrites=true&w=majority"
 
 
 export {connectionString}

@@ -10,7 +10,7 @@ export default function page() {
     const [description, setDescription] = useState("")
 
     const addData = async ()=>{
-        let response = await fetch("http://localhost:3001/api/addmeetup",{
+        let response = await fetch("http://localhost:3000/api/addmeetup",{
             method:"POST",
             body:JSON.stringify({title, imageUrl,address,description})
         })
