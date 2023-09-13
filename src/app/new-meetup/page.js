@@ -1,6 +1,5 @@
 'use client'
 import style from '@/app/components/Style/meetup.module.css'
-import MeetupBtn from '@/app/components/MeetupBtn'
 import { useState } from 'react'
 
 export default function page() {

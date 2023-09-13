@@ -25,3 +25,15 @@ export async function POST(request){
     }
     
 }
+
+export async function GET(){
+    try {
+    await mongoose.connect(connectionString)
+    const data = await MeetupData.find();
+    return NextResponse.json({result:data, success:true})
+    } catch (error) {
+        console.log(error);
+        return NextResponse.json({ result: false, error: "Database connection failed", success:false}, { status: 500 });
+    }
+    
+}

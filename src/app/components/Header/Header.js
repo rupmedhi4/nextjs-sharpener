@@ -7,7 +7,7 @@ export default function Header() {
             <div className={style.main_container} >
                 <h1>React Meetups</h1>
                 <div className={style.main_container_link}>
-                    <Link href="/meetups" className={style.link}>
+                    <Link href="/allmeetups" className={style.link}>
                         <span>All Meetups</span>
                     </Link>
                     <Link href="/new-meetup" className={style.link}>
