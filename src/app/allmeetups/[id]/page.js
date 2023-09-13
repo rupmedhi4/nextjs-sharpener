@@ -6,21 +6,20 @@ export default function page({ params }) {
 
     const [singleData, setSingleData] = useState('')
 
-    useEffect(async () => {
-        getData()
-    }, [])
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            let response = await fetch(`http://localhost:3000/api/addmeetup/${params.id}`);
+            response = await response.json();
+            setSingleData(response.result);
+          } catch (error) {
+            alert(error);
+          }
+        };
+    
+        fetchData();
+      }, [params.id]);
 
-    const getData = async () => {
-        try {
-            let response = await fetch(`http://localhost:3000/api/addmeetup/${params.id}`)
-            response = await response.json()
-            setSingleData(response.result)
-        } catch (error) {
-            alert(error)
-        }
-
-
-    }
 
     return (
         <>
